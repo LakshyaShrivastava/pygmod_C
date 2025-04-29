@@ -1,6 +1,7 @@
 #include "Variable.hpp"
 #include <stdexcept>
 
+
 // defining static vars
 int Variable::variableCount = 0;
 std::unordered_map<std::string, Variable*> Variable::variablesDict;

@@ -1,5 +1,4 @@
-#ifndef VARIABLE_HPP
-#define VARIABLE_HPP
+#pragma once
 
 #include <vector>
 #include <string>
@@ -27,5 +26,3 @@ private:
     std::vector<std::string> valueNames;
     std::unordered_map<int, std::string> domainDict;
 };
-
-#endif
