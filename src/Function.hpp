@@ -4,6 +4,7 @@
 #pragma once
 #include <vector>
 #include <string>
+#include <memory>
 
 class Function 
 {
@@ -28,19 +29,21 @@ public:
                        const std::vector<double>& table,
                        const std::string& name,
                        const std::vector<double>& inputVals) = 0;
-    virtual void exp (double val) = 0;
-    virtual void log (double sum) = 0;
-    virtual void sum (int varLoc) = 0;
-    virtual void maximum (const std::vector<std::string>& variables) = 0;
-    virtual void minimum (int varLoc) = 0;
-    virtual void expand_dims(const std::vector<std::string> sset,
-                             const std::vector<std::vector<std::string>>& iters) = 0;
-    virtual Function* operator*(const Function& funct) const = 0;
-    virtual Function* operator+(const Function& funct) const = 0;
-    virtual Function* radd(const Function& funct) = 0;
-    virtual Function* operator-(const Function& funct) const = 0;
-    virtual Function* operator/(const Function& funct) const = 0;
-    virtual Function* rtruediv(const Function& funct) const = 0;
+    virtual std::unique_ptr<Function> exp (double val) = 0;
+    virtual std::unique_ptr<Function> log (double base) = 0;
+    virtual std::unique_ptr<Function> sum (int varLoc) = 0;
+    virtual std::unique_ptr<Function> maximum (const std::vector<std::string>& variables) = 0;
+    virtual std::unique_ptr<Function> minimum (int varLoc) = 0;
+    
+    static std::vector<std::vector<int>> expand_dims(const std::vector<std::string> sset,
+                             const std::vector<std::vector<std::string>>& iters);
+    
+    virtual std::unique_ptr<Function> operator*(const Function& funct) const = 0;
+    virtual std::unique_ptr<Function> operator+(const Function& funct) const = 0;
+    virtual std::unique_ptr<Function> radd(const Function& funct) = 0;
+    virtual std::unique_ptr<Function> operator-(const Function& funct) const = 0;
+    virtual std::unique_ptr<Function> operator/(const Function& funct) const = 0;
+    virtual std::unique_ptr<Function> rtruediv(const Function& funct) const = 0;
 
     virtual void print() const = 0;
 };
