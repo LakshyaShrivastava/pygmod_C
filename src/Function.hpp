@@ -5,6 +5,7 @@
 #include <vector>
 #include <string>
 #include <memory>
+#include "Variable.hpp"
 
 class Function 
 {
@@ -31,17 +32,19 @@ public:
                        const std::vector<double>& inputVals) = 0;
     virtual std::unique_ptr<Function> exp (double val) = 0;
     virtual std::unique_ptr<Function> log (double base) = 0;
-    virtual std::unique_ptr<Function> sum (int varLoc) = 0;
-    virtual std::unique_ptr<Function> maximum (const std::vector<std::string>& variables) = 0;
-    virtual std::unique_ptr<Function> minimum (int varLoc) = 0;
+    virtual std::unique_ptr<Function> sum (const std::vector<Variable>& variables) = 0;
+    virtual std::unique_ptr<Function> maximum (const std::vector<Variable>& variables) = 0;
+    virtual std::unique_ptr<Function> minimum (const std::vector<Variable>& variables) = 0;
     
-    static std::vector<std::vector<int>> expand_dims(const std::vector<std::string> sset,
-                             const std::vector<std::vector<std::string>>& iters);
+    static std::vector<std::vector<int>> expand_dims(const std::vector<Variable> sset,
+                             const std::vector<std::vector<Variable>>& iters);
     
     virtual std::unique_ptr<Function> operator*(const Function& funct) const = 0;
     virtual std::unique_ptr<Function> operator+(const Function& funct) const = 0;
-    virtual std::unique_ptr<Function> radd(const Function& funct) = 0;
+    virtual std::unique_ptr<Function> radd(const Function& funct) const = 0;
     virtual std::unique_ptr<Function> operator-(const Function& funct) const = 0;
+    virtual std::unique_ptr<Function> operator-() const = 0;
+    virtual std::unique_ptr<Function> rsub(const Function& funct) const  = 0;
     virtual std::unique_ptr<Function> operator/(const Function& funct) const = 0;
     virtual std::unique_ptr<Function> rtruediv(const Function& funct) const = 0;
 
