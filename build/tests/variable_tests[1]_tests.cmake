@@ -1,5 +1,7 @@
+add_test([=[VariableTest.InitializationWithAllArgs]=]  [==[C:/Users/LakshCPlusPLus/OneDrive - UC Irvine/Desktop/AI_Research/pygmod_C/build/bin/Debug/variable_tests.exe]==] [==[--gtest_filter=VariableTest.InitializationWithAllArgs]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[VariableTest.InitializationWithAllArgs]=]  PROPERTIES WORKING_DIRECTORY [==[C:/Users/LakshCPlusPLus/OneDrive - UC Irvine/Desktop/AI_Research/pygmod_C/build/tests]==] SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
 add_test([=[VariableTest.NameDefaultsToId]=]  [==[C:/Users/LakshCPlusPLus/OneDrive - UC Irvine/Desktop/AI_Research/pygmod_C/build/bin/Debug/variable_tests.exe]==] [==[--gtest_filter=VariableTest.NameDefaultsToId]==] --gtest_also_run_disabled_tests)
 set_tests_properties([=[VariableTest.NameDefaultsToId]=]  PROPERTIES WORKING_DIRECTORY [==[C:/Users/LakshCPlusPLus/OneDrive - UC Irvine/Desktop/AI_Research/pygmod_C/build/tests]==] SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
 add_test([=[VariableTest.ThrowsOnDuplicateName]=]  [==[C:/Users/LakshCPlusPLus/OneDrive - UC Irvine/Desktop/AI_Research/pygmod_C/build/bin/Debug/variable_tests.exe]==] [==[--gtest_filter=VariableTest.ThrowsOnDuplicateName]==] --gtest_also_run_disabled_tests)
 set_tests_properties([=[VariableTest.ThrowsOnDuplicateName]=]  PROPERTIES WORKING_DIRECTORY [==[C:/Users/LakshCPlusPLus/OneDrive - UC Irvine/Desktop/AI_Research/pygmod_C/build/tests]==] SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
-set(  variable_tests_TESTS VariableTest.NameDefaultsToId VariableTest.ThrowsOnDuplicateName)
+set(  variable_tests_TESTS VariableTest.InitializationWithAllArgs VariableTest.NameDefaultsToId VariableTest.ThrowsOnDuplicateName)

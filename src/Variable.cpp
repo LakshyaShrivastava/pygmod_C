@@ -10,27 +10,36 @@ Variable::Variable(int domainSize, std::string name, std::list<std::string> valu
     : id(incr()), domainSize(domainSize)
 {
     // If name was not provided, use ID as the name
-    if (name.empty()) {
+    if (name.empty()) 
+    {
         this->name = std::to_string(this->id);
-    } else {
+    } 
+    else 
+    {
         this->name = name;
     }
 
     // Handle valueNames if provided
-    if (!valueNames.empty()) {
-        if (valueNames.size() != static_cast<size_t>(this->domainSize)) {
+    if (!valueNames.empty()) 
+    {
+        if (valueNames.size() != static_cast<size_t>(this->domainSize)) 
+        {
             throw std::invalid_argument("valueNames and domainSize not matching");
         }
 
         // Copy list into vector and build domainDict
         int i = 0;
-        for (const std::string& val : valueNames) {
+        for (const std::string& val : valueNames) 
+        {
             this->valueNames.push_back(val);
             this->domainDict[i++] = val;
         }
-    } else {
+    } 
+    else 
+    {
         // Generate default valueNames and domainDict
-        for (int i = 0; i < this->domainSize; ++i) {
+        for (int i = 0; i < this->domainSize; ++i) 
+        {
             std::string val = std::to_string(i);
             this->valueNames.push_back(val);
             this->domainDict[i] = val;
@@ -38,7 +47,8 @@ Variable::Variable(int domainSize, std::string name, std::list<std::string> valu
     }
 
     // Check for duplicate variable name
-    if (variablesDict.find(this->name) != variablesDict.end()) {
+    if (variablesDict.find(this->name) != variablesDict.end()) 
+    {
         throw std::invalid_argument("Two Variables with same name.");
     }
 
