@@ -1,0 +1,5 @@
+pygmodCPlusPlus_tests_NOT_BUILT 0 0
+FactorSanityTest.AlwaysPasses 3 0.0083582
+VariableTest.NameDefaultsToId 2 0.0127787
+VariableTest.ThrowsOnDuplicateName 2 0.0120763
+---

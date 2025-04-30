@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\LakshCPlusPLus\OneDrive - UC Irvine\Desktop\AI_Research\pygmod_C\tests\test_variable.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\LakshCPlusPLus\OneDrive - UC Irvine\Desktop\AI_Research\pygmod_C\tests\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{E90058AC-CB6F-353B-9505-41F7FDBE1BD6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

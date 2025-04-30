@@ -1,0 +1,5 @@
+if(EXISTS "C:/Users/LakshCPlusPLus/OneDrive - UC Irvine/Desktop/AI_Research/pygmod_C/build/tests/variable_tests[1]_tests.cmake")
+  include("C:/Users/LakshCPlusPLus/OneDrive - UC Irvine/Desktop/AI_Research/pygmod_C/build/tests/variable_tests[1]_tests.cmake")
+else()
+  add_test(variable_tests_NOT_BUILT variable_tests_NOT_BUILT)
+endif()

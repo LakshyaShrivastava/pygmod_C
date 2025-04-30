@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "C:/Users/LakshCPlusPLus/OneDrive - UC Irvine/Desktop/AI_Research/pygmod_C/build/_deps/googletest-subbuild/CMakeFiles/googletest-populate"
+		},
+		{
+			"file" : "C:/Users/LakshCPlusPLus/OneDrive - UC Irvine/Desktop/AI_Research/pygmod_C/build/_deps/googletest-subbuild/CMakeFiles/b7da8fa9926ef66bfe064189b853690b/googletest-populate.rule"
+		},
+		{
+			"file" : "C:/Users/LakshCPlusPLus/OneDrive - UC Irvine/Desktop/AI_Research/pygmod_C/build/_deps/googletest-subbuild/CMakeFiles/94dc4333dc58ead734cf6820082ee309/googletest-populate-complete.rule"
+		},
+		{
+			"file" : "C:/Users/LakshCPlusPLus/OneDrive - UC Irvine/Desktop/AI_Research/pygmod_C/build/_deps/googletest-subbuild/CMakeFiles/f13e82f8bb0c4c66fa3a0361de463521/googletest-populate-build.rule"
+		},
+		{
+			"file" : "C:/Users/LakshCPlusPLus/OneDrive - UC Irvine/Desktop/AI_Research/pygmod_C/build/_deps/googletest-subbuild/CMakeFiles/f13e82f8bb0c4c66fa3a0361de463521/googletest-populate-configure.rule"
+		},
+		{
+			"file" : "C:/Users/LakshCPlusPLus/OneDrive - UC Irvine/Desktop/AI_Research/pygmod_C/build/_deps/googletest-subbuild/CMakeFiles/f13e82f8bb0c4c66fa3a0361de463521/googletest-populate-download.rule"
+		},
+		{
+			"file" : "C:/Users/LakshCPlusPLus/OneDrive - UC Irvine/Desktop/AI_Research/pygmod_C/build/_deps/googletest-subbuild/CMakeFiles/f13e82f8bb0c4c66fa3a0361de463521/googletest-populate-install.rule"
+		},
+		{
+			"file" : "C:/Users/LakshCPlusPLus/OneDrive - UC Irvine/Desktop/AI_Research/pygmod_C/build/_deps/googletest-subbuild/CMakeFiles/f13e82f8bb0c4c66fa3a0361de463521/googletest-populate-mkdir.rule"
+		},
+		{
+			"file" : "C:/Users/LakshCPlusPLus/OneDrive - UC Irvine/Desktop/AI_Research/pygmod_C/build/_deps/googletest-subbuild/CMakeFiles/f13e82f8bb0c4c66fa3a0361de463521/googletest-populate-patch.rule"
+		},
+		{
+			"file" : "C:/Users/LakshCPlusPLus/OneDrive - UC Irvine/Desktop/AI_Research/pygmod_C/build/_deps/googletest-subbuild/CMakeFiles/f13e82f8bb0c4c66fa3a0361de463521/googletest-populate-test.rule"
+		},
+		{
+			"file" : "C:/Users/LakshCPlusPLus/OneDrive - UC Irvine/Desktop/AI_Research/pygmod_C/build/_deps/googletest-subbuild/CMakeFiles/f13e82f8bb0c4c66fa3a0361de463521/googletest-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"googletest-populate"
+		],
+		"name" : "googletest-populate"
+	}
+}

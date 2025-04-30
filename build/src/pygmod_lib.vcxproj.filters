@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\LakshCPlusPLus\OneDrive - UC Irvine\Desktop\AI_Research\pygmod_C\src\Factor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\LakshCPlusPLus\OneDrive - UC Irvine\Desktop\AI_Research\pygmod_C\src\Variable.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\LakshCPlusPLus\OneDrive - UC Irvine\Desktop\AI_Research\pygmod_C\src\Factor.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\LakshCPlusPLus\OneDrive - UC Irvine\Desktop\AI_Research\pygmod_C\src\Variable.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\LakshCPlusPLus\OneDrive - UC Irvine\Desktop\AI_Research\pygmod_C\src\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{D0D75AA8-FFC1-393C-9557-3E9AE56ACA22}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{E90058AC-CB6F-353B-9505-41F7FDBE1BD6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

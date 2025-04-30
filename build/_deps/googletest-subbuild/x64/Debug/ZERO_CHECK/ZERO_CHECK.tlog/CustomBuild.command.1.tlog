@@ -1,0 +1,10 @@
+^C:\USERS\LAKSHCPLUSPLUS\ONEDRIVE - UC IRVINE\DESKTOP\AI_RESEARCH\PYGMOD_C\BUILD\_DEPS\GOOGLETEST-SUBBUILD\CMAKEFILES\B7DA8FA9926EF66BFE064189B853690B\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/LakshCPlusPLus/OneDrive - UC Irvine/Desktop/AI_Research/pygmod_C/build/_deps/googletest-subbuild" "-BC:/Users/LakshCPlusPLus/OneDrive - UC Irvine/Desktop/AI_Research/pygmod_C/build/_deps/googletest-subbuild" --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file "C:/Users/LakshCPlusPLus/OneDrive - UC Irvine/Desktop/AI_Research/pygmod_C/build/_deps/googletest-subbuild/googletest-populate.sln"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

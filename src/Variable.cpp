@@ -81,3 +81,8 @@ const int Variable::getDomainSize() const
 {
     return this->domainSize;
 }
+
+const std::string Variable::getName() const
+{
+    return this->name;
+}
