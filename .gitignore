@@ -1,0 +1,10 @@
+# Ignore everything in build/
+build/*
+
+# But NOT subfolders (we need these for nested outputs like bin/)
+!build/bin/
+!build/bin/**/
+
+# Allow only test executables inside build/bin
+!build/bin/*_tests
+!build/bin/*_tests.exe
