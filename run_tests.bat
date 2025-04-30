@@ -45,7 +45,7 @@ if exist "%TEST_EXE%" (
         "%TEST_EXE%" --gtest_filter=%2
     )
 ) else (
-    echo ❌ Test executable not found: %TEST_EXE%
+    echo Test executable not found: %TEST_EXE%
     exit /b 1
 )
 
@@ -53,5 +53,5 @@ goto :eof
 
 :error
 echo.
-echo ❌ An error occurred during configure or build.
+echo An error occurred during configure or build.
 exit /b 1

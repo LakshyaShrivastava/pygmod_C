@@ -2,8 +2,6 @@
 add_library(pygmod_lib
     Factor.cpp
     Variable.cpp
-    Factor.hpp
-    Variable.hpp
 )
 
 # Expose the 'src/' directory to anyone linking against this library

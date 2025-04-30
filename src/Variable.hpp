@@ -21,9 +21,8 @@ public:
     const std::string getName() const;
     const int getId() const;
     const int getDomainSize() const;
-    const std::vector<std::string>& getValueNames() const { return valueNames; }
-    const std::unordered_map<int, std::string>& getDomainDict() const { return domainDict; }
-
+    const std::vector<std::string>& getValueNames() const;
+    const std::unordered_map<int, std::string>& getDomainDict() const;
 
     // Required for comparisons (fixes std::sort and vector ==)
     bool operator==(const Variable& other) const 

@@ -12,20 +12,6 @@ FetchContent_MakeAvailable(googletest)
 include(GoogleTest)
 
 # ----------------------------
-# factor_tests executable
-# ----------------------------
-add_executable(factor_tests
-    test_factor.cpp
-)
-
-target_link_libraries(factor_tests
-    pygmod_lib
-    gtest_main
-)
-
-gtest_discover_tests(factor_tests)
-
-# ----------------------------
 # variable_tests executable
 # ----------------------------
 add_executable(variable_tests
@@ -38,3 +24,17 @@ target_link_libraries(variable_tests
 )
 
 gtest_discover_tests(variable_tests)
+
+# ----------------------------
+# factor_tests executable
+# ----------------------------
+add_executable(factor_tests
+    test_factor.cpp
+)
+
+target_link_libraries(factor_tests
+    pygmod_lib
+    gtest_main
+)
+
+gtest_discover_tests(factor_tests)

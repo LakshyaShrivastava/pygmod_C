@@ -3,7 +3,7 @@
 
 
 // defining static vars
-int Variable::variableCount = 0;
+int Variable::variableCount = 1;
 std::unordered_map<std::string, Variable*> Variable::variablesDict;
 
 Variable::Variable(int domainSize, std::string name, std::list<std::string> valueNames)
@@ -79,7 +79,7 @@ std::ostream& operator<<(std::ostream& os, const Variable& var)
 }
 
 int Variable::incr() {
-    return ++variableCount;
+    return variableCount++;
 }
 
 const int Variable::getId() const
@@ -95,4 +95,14 @@ const int Variable::getDomainSize() const
 const std::string Variable::getName() const
 {
     return this->name;
+}
+
+const std::vector<std::string>& Variable::getValueNames() const 
+{
+    return valueNames;
+}
+
+const std::unordered_map<int, std::string>& Variable::getDomainDict() const
+{
+    return domainDict;
 }
