@@ -71,3 +71,13 @@ std::ostream& operator<<(std::ostream& os, const Variable& var)
 int Variable::incr() {
     return ++variableCount;
 }
+
+const int Variable::getId() const
+{
+    return this->id;
+}
+
+const int Variable::getDomainSize() const
+{
+    return this->domainSize;
+}

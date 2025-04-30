@@ -11,6 +11,8 @@ class Variable
 public:
     Variable(int domainSize, std::string name="", std::list<std::string> valueName={});
     friend std::ostream& operator<<(std::ostream& os, const Variable& v);
+    const int getId() const;
+    const int getDomainSize() const;
     ~Variable();
 
 private:
