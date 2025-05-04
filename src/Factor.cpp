@@ -42,7 +42,7 @@ Factor::Factor(const std::vector<Variable>& scope, const std::vector<double>& ta
         {
             std::cout << "Warning: Variables in the scope are not sorted by ID. Sorting." << std::endl;
         }
-        this->table = table;
+        this->table = table; // Need to add transpose handeling
     } 
     else 
     {
@@ -59,13 +59,30 @@ Factor::Factor(const std::vector<Variable>& scope, const std::vector<double>& ta
     }
 }
 
-
-void Factor::print() const 
+std::vector<std::vector<int>> Factor::indices() const 
 {
-    for (const auto& val : table)
-    {
-        std::cout << val << ' ';
-    }
-    std::cout << std::endl;
+    std::vector<int> shape = this->getShape();
+
+    return std::vector<std::vector<int>>();
 }
+
+std::vector<int> Factor::getShape() const
+{
+    std::vector<int> shape;
+    for (const auto& var : this->scope)
+    {
+        shape.push_back(var.getDomainSize());
+    }
+    return shape;
+}
+
+
+// void Factor::print() const 
+// {
+//     for (const auto& val : table)
+//     {
+//         std::cout << val << ' ';
+//     }
+//     std::cout << std::endl;
+// }
 

@@ -286,6 +286,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   <ItemGroup>
     <ClCompile Include="C:\Users\LakshCPlusPLus\OneDrive - UC Irvine\Desktop\AI_Research\pygmod_C\src\Factor.cpp" />
     <ClCompile Include="C:\Users\LakshCPlusPLus\OneDrive - UC Irvine\Desktop\AI_Research\pygmod_C\src\Variable.cpp" />
+    <ClCompile Include="C:\Users\LakshCPlusPLus\OneDrive - UC Irvine\Desktop\AI_Research\pygmod_C\src\np_utils.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="C:\Users\LakshCPlusPLus\OneDrive - UC Irvine\Desktop\AI_Research\pygmod_C\build\ZERO_CHECK.vcxproj">

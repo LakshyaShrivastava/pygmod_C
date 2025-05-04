@@ -7,6 +7,9 @@
     <ClCompile Include="C:\Users\LakshCPlusPLus\OneDrive - UC Irvine\Desktop\AI_Research\pygmod_C\src\Variable.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="C:\Users\LakshCPlusPLus\OneDrive - UC Irvine\Desktop\AI_Research\pygmod_C\src\np_utils.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="C:\Users\LakshCPlusPLus\OneDrive - UC Irvine\Desktop\AI_Research\pygmod_C\src\CMakeLists.txt" />

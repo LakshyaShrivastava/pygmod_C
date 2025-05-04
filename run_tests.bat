@@ -3,7 +3,7 @@ setlocal enabledelayedexpansion
 
 :: Test binary location (adjust if needed)
 set TEST_DIR=build\bin\Debug
-set TESTS=factor variable
+set TESTS=factor variable nputils
 
 :: Step 1: Configure
 echo [1/3] Configuring project...

@@ -38,3 +38,17 @@ target_link_libraries(factor_tests
 )
 
 gtest_discover_tests(factor_tests)
+
+# ----------------------------
+# factor_tests executable
+# ----------------------------
+add_executable(nputils_tests
+    test_nputils
+)
+
+target_link_libraries(nputils_tests
+    pygmod_lib
+    gtest_main
+)
+
+gtest_discover_tests(nputils_tests)

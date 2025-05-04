@@ -3,7 +3,7 @@
 set -e  # Exit on error
 
 TEST_DIR="build/bin"
-TESTS=("factor" "variable")
+TESTS=("factor" "variable" "nputils")
 
 # Step 1: Configure
 echo "[1/3] Configuring project..."

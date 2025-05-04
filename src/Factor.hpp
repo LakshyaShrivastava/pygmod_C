@@ -14,7 +14,7 @@
 #include "Function.hpp"
 #include "Variable.hpp"
 
-class Factor : public Function 
+class Factor //: Function 
 {
 public:
     static std::map<std::string, Factor*> factorsDict;
@@ -35,7 +35,7 @@ public:
 
     static std::vector<std::vector<int>> expand_dims(const std::vector<Variable>& sset,
                                                      const std::vector<std::vector<Variable>>& iters);
-    
+    /*
     std::unique_ptr<Function> log(double base = std::exp(1.0)) override;
     std::unique_ptr<Function> maximum(const std::vector<Variable>& variables) override;
     std::unique_ptr<Function> minimum(const std::vector<Variable>& variables) override;
@@ -50,5 +50,8 @@ public:
     std::unique_ptr<Function> operator-() const override;
     std::unique_ptr<Function> operator/(const Function& funct) const override;
     std::unique_ptr<Function> rtruediv(const Function& funct) const override;
+    */
 
+    // Helpers
+    std::vector<int> getShape() const;
 };

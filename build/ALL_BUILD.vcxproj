@@ -193,6 +193,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <Project>{1EDD8EBD-2705-3540-A97C-1A6BA29250F2}</Project>
       <Name>gtest_main</Name>
     </ProjectReference>
+    <ProjectReference Include="C:\Users\LakshCPlusPLus\OneDrive - UC Irvine\Desktop\AI_Research\pygmod_C\build\tests\nputils_tests.vcxproj">
+      <Project>{2DD7BCF0-C94F-3732-9C6E-15A77A735536}</Project>
+      <Name>nputils_tests</Name>
+    </ProjectReference>
     <ProjectReference Include="C:\Users\LakshCPlusPLus\OneDrive - UC Irvine\Desktop\AI_Research\pygmod_C\build\src\pygmod_lib.vcxproj">
       <Project>{521E56ED-3FC2-3290-89F0-C23CC14A0D2C}</Project>
       <Name>pygmod_lib</Name>
