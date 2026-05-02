@@ -1,48 +1,51 @@
 # pygmod_C
 
-**Probabilistic graphical models in C++** — modular C++ core inspired by a Python graphical-model library, built for **undergraduate research** at UC Irvine on **probabilistic AI** and efficient inference (including directions such as **bucket elimination** for graphical models). This repo translates `Variable`, `Factor`, and `Function` with **CMake** and **GoogleTest** so inference code can grow with a disciplined, test-driven layout.
+**Probabilistic graphical models in C++** — a modular CMake + C++17 core (**`Variable`**, **`Factor`**, **`Function`**, utilities) maintained for undergraduate research at UC Irvine on **probabilistic AI** and efficient inference (directions include **bucket elimination** for graphical models). The layout mirrors discipline from an earlier Python graphical-model library and uses **GoogleTest** for regressions.
 
-**Author:** [Lakshya Shrivastava](https://github.com/LakshyaShrivastava) · [LinkedIn](https://www.linkedin.com/in/lakshya-shrivastava0803)
+**Author:** [Lakshya Shrivastava](https://github.com/LakshyaShrivastava) · [LinkedIn](https://www.linkedin.com/in/lakshya-shrivastava0803/)
+
+**License:** [Apache License 2.0](LICENSE)
 
 ---
 
-## Project Structure
+## Project structure
+
 ```
 pygmod_C/
 ├── CMakeLists.txt
 ├── src/
 │   ├── CMakeLists.txt
-│   ├── Factor.cpp
-│   ├── Factor.hpp
-│   ├── Variable.cpp
-│   ├── Variable.hpp
+│   ├── Factor.cpp / Factor.hpp
+│   ├── Variable.cpp / Variable.hpp
+│   ├── np_utils.cpp / np_utils.hpp
 │   └── Function.hpp
-├── tests/
-│   ├── CMakeLists.txt
-│   ├── test_factor.cpp
-│   └── test_variable.cpp
-├── build/                  # Not going to be tracked in git other than test binaries
-├── run_tests.bat           # Windows build & test script
-└── run_tests.sh            # Unix/macOS build & test script
+├── tests/              # GoogleTest binaries: variable_tests, factor_tests, nputils_tests
+├── run_tests.bat       # Windows
+└── run_tests.sh        # Unix / macOS / WSL
 ```
 
 ---
-## Quickstart
 
-### Prerequisites
+## Prerequisites
+
 - C++17 compiler (MSVC, g++, or clang++)
-- CMake ≥ 3.10
+- CMake **≥ 3.10**
 - Git
 
 ---
-### Windows (CMD or PowerShell)
+
+## Quickstart
+
+**Windows**
+
 ```bash
 git clone https://github.com/LakshyaShrivastava/pygmod_C.git
 cd pygmod_C
 run_tests.bat
 ```
 
-### macOS / Linux / WSL
+**macOS / Linux / WSL**
+
 ```bash
 git clone https://github.com/LakshyaShrivastava/pygmod_C.git
 cd pygmod_C
@@ -50,100 +53,39 @@ chmod +x run_tests.sh
 ./run_tests.sh
 ```
 
-### Run a Specific Test
+Configure and build manually if you prefer:
+
 ```bash
-run_tests.bat variable VariableTest.NameDefaultsToId   # Windows
-./run_tests.sh variable VariableTest.NameDefaultsToId  # Unix/macOS/WSL
+cmake -S . -B build
+cmake --build build
+ctest --test-dir build --output-on-failure
 ```
 
 ---
+
 ## Testing
-Unit tests are written using GoogleTest and split across executables for modular execution:
-- `variable_tests`
-- `factor_tests`
 
-Test executables are placed in `build/bin` and can be run individually:
+GoogleTest-backed executables are produced under **`build/bin/`** (depending on generator):
+
+| Binary | Coverage |
+|--------|----------|
+| `variable_tests` | `Variable` |
+| `factor_tests` | `Factor` |
+| `nputils_tests` | `np_utils` helpers |
+
+Filter examples:
+
 ```bash
+./run_tests.sh variable VariableTest.NameDefaultsToId
+
 ./build/bin/factor_tests
-./build/bin/variable_tests --gtest_filter=VariableTest.*
+./build/bin/variable_tests --gtest_filter="VariableTest.*"
 ```
 
----
-## Adding a New Source + Test File
-
-✅ Step 1: Create Your Source + Header Files
-    - In `src/`, create the `.cpp` and `.hpp` files for your new class. 
-    - Let's call these `src/MyModule.cpp` and `src/MyModule.hpp`.
-    - Implement your class in these files.
-
-✅ Step 2: Register Your Source File in `src/CMakeLists.txt`
-    - Open `src/CMakeLists.txt` and add your file to the library:
-
-        add_library(pygmod_lib
-            Factor.cpp
-            Variable.cpp
-            MyModule.cpp    # ✅ Add this line
-        )
-
-        target_include_directories(pygmod_lib PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
-
-✅ Step 3: Create a Test File in `tests/`
-    - Let's call this `tests/test_mymodule.cpp`
-    - Write test cases in this file using the GoogleTest format.
-
-        // tests/test_mymodule.cpp
-        #include <gtest/gtest.h>
-        #include "MyModule.hpp"
-
-        TEST(MyModuleTest, ConstructorWorks) {
-            MyModule m;
-            EXPECT_TRUE(m.isInitialized());
-        }
-
-✅ Step 4: Add a New Test Executable in `tests/CMakeLists.txt`
-    - Append this to the bottom of `tests/CMakeLists.txt`:
-
-        add_executable(mymodule_tests
-            test_mymodule.cpp
-        )
-
-        target_link_libraries(mymodule_tests
-            pygmod_lib
-            gtest_main
-        )
-
-        gtest_discover_tests(mymodule_tests)
-
-✅ Step 5: Run the New Tests
-    - From project root:
-    - Run all tests in the module:
-
-        # Unix/macOS/WSL
-        ./run_tests.sh mymodule
-
-        # Windows
-        run_tests.bat mymodule
-
-    - Or filter specific tests:
-
-        # Unix
-        ./build/bin/mymodule_tests --gtest_filter=MyModuleTest.*
-
-        # Windows
-        .\build\bin\mymodule_tests.exe --gtest_filter=MyModuleTest.*
-
-✅ Step 6: (Optional) Add the Module to `run_tests` Script
-    - To make your new module's tests run automatically when you execute `run_tests.bat` or `run_tests.sh` with no arguments, you must add its name to the test list.
-
-    - In `run_tests.bat`, update:
-
-        set TESTS=factor variable mymodule
-
-    - In `run_tests.sh`, update:
-
-        TESTS=("factor" "variable" "mymodule")
+Windows equivalents: `run_tests.bat …` and `.\build\bin\….exe`.
 
 ---
-## Git Tracking Policy
-- Most of `build/` is excluded via `.gitignore`
-- Only test executables inside `build/bin/` are committed, for quick validation
+
+## Contributing
+
+See **[CONTRIBUTING.md](CONTRIBUTING.md)** for registering new source files, adding test executables, and notes on roadmap / git policy.

@@ -40,10 +40,10 @@ target_link_libraries(factor_tests
 gtest_discover_tests(factor_tests)
 
 # ----------------------------
-# factor_tests executable
+# nputils_tests executable
 # ----------------------------
 add_executable(nputils_tests
-    test_nputils
+    test_nputils.cpp
 )
 
 target_link_libraries(nputils_tests
