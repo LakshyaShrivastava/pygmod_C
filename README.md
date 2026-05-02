@@ -1,9 +1,11 @@
 # pygmod_C
-C++ implementation of a Python-based graphical model library using modular, test-driven design.
 
-Includes translation of `Variable`, `Factor`, and `Function` classes, with GoogleTest and CMake build system.
+**Probabilistic graphical models in C++** — modular C++ core inspired by a Python graphical-model library, built for **undergraduate research** at UC Irvine on **probabilistic AI** and efficient inference (including directions such as **bucket elimination** for graphical models). This repo translates `Variable`, `Factor`, and `Function` with **CMake** and **GoogleTest** so inference code can grow with a disciplined, test-driven layout.
+
+**Author:** [Lakshya Shrivastava](https://github.com/LakshyaShrivastava) · [LinkedIn](https://www.linkedin.com/in/lakshya-shrivastava0803)
 
 ---
+
 ## Project Structure
 ```
 pygmod_C/
